@@ -16,28 +16,26 @@ export default function Header({
   return (
     <header className={cx('component')}>
       <SkipNavigationLink />
-        <Container>
-          <div className={cx('navbar')}>
-            <div className={cx('brand')}>
-              <Link href="/">
-                <a className={cx('title')}>{title}</a>
-              </Link>
-              {description && <p className={cx('description')}>{description}</p>}
-            </div>
-            <button
-              type="button"
-              className={cx('nav-toggle')}
-              onClick={() => setIsNavShown(!isNavShown)}
-              aria-label="Toggle navigation"
-              aria-controls={cx('primary-navigation')}
-              aria-expanded={isNavShown}
-            >
-              ☰
-            </button>
-            <NavigationMenu
+      <Container>
+        <div className={cx('navbar')}>
+          <div className={cx('brand')}>
+            <Link href='/'>{title}</Link>
+            {description && <p className={cx('description')}>{description}</p>}
+          </div>
+          <button
+            type="button"
+            className={cx('nav-toggle')}
+            onClick={() => setIsNavShown(!isNavShown)}
+            aria-label="Toggle navigation"
+            aria-controls={cx('primary-navigation')}
+            aria-expanded={isNavShown}
+          >
+            ☰
+          </button>
+          <NavigationMenu
               className={cx(['primary-navigation', isNavShown ? 'show' : undefined])}
-              menuItems={menuItems}
-            />
+            menuItems={menuItems}
+          />
         </div>
       </Container>
     </header>

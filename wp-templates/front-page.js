@@ -10,6 +10,7 @@ import {
   Hero,
   SEO,
 } from '../components';
+import Link from 'next/link';
 
 export default function Component() {
   const { data } = useQuery(Component.query, {
@@ -35,6 +36,9 @@ export default function Component() {
           <div className="text-center">
             <p>This page is utilizing the "front-page" WordPress template.</p>
             <code>wp-templates/front-page.js</code>
+            <div>
+              <Link href='/guide-to-external-security-threats'>Go to a post</Link>
+            </div>
           </div>
         </Container>
       </Main>

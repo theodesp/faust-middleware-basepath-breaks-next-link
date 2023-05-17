@@ -14,7 +14,6 @@ export default function FeaturedImage({
 
   width = width ? width : image?.mediaDetails?.width;
   height = height ? height : image?.mediaDetails?.height;
-  layout = layout ?? 'fill';
 
   return src && width && height ? (
     <figure className={className}>
