@@ -6,7 +6,6 @@ import possibleTypes from './possibleTypes.json';
  * @type {import('@faustwp/core').FaustConfig}
  **/
 export default setConfig({
-  basePath: '/blog',
   templates,
   experimentalPlugins: [],
   experimentalToolbar: true,
