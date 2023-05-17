@@ -25,11 +25,6 @@ export default function Component() {
   return (
     <>
       <SEO title={siteTitle} description={siteDescription} />
-      <Header
-        title={siteTitle}
-        description={siteDescription}
-        menuItems={primaryMenu}
-      />
       <Main>
         <Container>
           <Hero title={'Front Page'} />
@@ -42,7 +37,6 @@ export default function Component() {
           </div>
         </Container>
       </Main>
-      <Footer title={siteTitle} menuItems={footerMenu} />
     </>
   );
 }
