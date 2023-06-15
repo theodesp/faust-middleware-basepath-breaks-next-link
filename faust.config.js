@@ -9,6 +9,6 @@ export default setConfig({
   basePath: '/blog',
   templates,
   experimentalPlugins: [],
-  experimentalToolbar: true,
+  experimentalToolbar: false,
   possibleTypes,
 });
