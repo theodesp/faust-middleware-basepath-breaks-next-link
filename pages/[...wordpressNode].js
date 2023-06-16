@@ -5,7 +5,7 @@ export default function Page(props) {
 }
 
 export function getStaticProps(ctx) {
-  console.debug(ctx);
+  console.log(ctx);
   return getWordPressProps({ ctx });
 }
 
