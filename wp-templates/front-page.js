@@ -32,7 +32,7 @@ export default function Component() {
             <p>This page is utilizing the "front-page" WordPress template.</p>
             <code>wp-templates/front-page.js</code>
             <div>
-              <Link href='/tempore-maxime-a-adipisci'>Go to a post</Link>
+              <Link href='tempore-maxime-a-adipisci'>Go to a post</Link>
             </div>
           </div>
         </Container>
