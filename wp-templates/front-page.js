@@ -34,6 +34,9 @@ export default function Component() {
             <div>
               <Link href='/tempore-maxime-a-adipisci'>Go to a post</Link>
             </div>
+            <div>
+              <Link href='/example'>Go to another post</Link>
+            </div>
           </div>
         </Container>
       </Main>
