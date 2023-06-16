@@ -5,6 +5,7 @@ const { withFaust, getWpHostname } = require('@faustwp/core');
  **/
 module.exports = withFaust({
   reactStrictMode: true,
+  skipMiddlewareUrlNormalize: true,
   sassOptions: {
     includePaths: ['node_modules'],
   },
