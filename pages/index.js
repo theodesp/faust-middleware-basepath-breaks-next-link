@@ -5,6 +5,6 @@ export default function Page(props) {
 }
 
 export function getStaticProps(ctx) {
-  console.log(ctx);
+  console.debug("PREFETCHING")
   return getWordPressProps({ ctx });
 }

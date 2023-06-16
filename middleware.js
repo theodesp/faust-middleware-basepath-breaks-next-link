@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server';
 // middleware.ts
 // This function can be marked `async` if using `await` inside
 export function middleware(request) {
-  const response = NextResponse.next()
-
+  console.log("here 1: ", request);
+  return NextResponse.rewrite(request.nextUrl.href)
   // if (request.nextUrl.pathname.includes('/blog/')) {
   //   const paths = request.nextUrl.pathname.split('/');
 
@@ -21,5 +21,4 @@ export function middleware(request) {
   //   return NextResponse.rewrite(newUrl);
   // }
   // return;
-  return response;
 }
