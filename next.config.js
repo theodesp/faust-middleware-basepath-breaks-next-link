@@ -16,5 +16,4 @@ module.exports = withFaust({
     locales: ['en'],
     defaultLocale: 'en',
   },
-  basePath: '/blog',
 });
