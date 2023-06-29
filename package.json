@@ -6,14 +6,15 @@
     "dev": "faust dev",
     "build": "faust build",
     "generate": "faust generatePossibleTypes",
-    "start": "faust start"
+    "start": "faust start",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@apollo/client": "^3.7.10",
     "@faustwp/cli": "1.0.1",
     "@faustwp/core": "1.0.1",
-    "@wordpress/base-styles": "^4.7.0",
-    "@wordpress/block-library": "^7.13.0",
+    "@wordpress/base-styles": "^4.27.0",
+    "@wordpress/block-library": "^8.12.0",
     "classnames": "^2.3.2",
     "graphql": "^16.6.0",
     "next": "^13.4.2",
@@ -22,6 +23,7 @@
     "sass": "^1.54.9"
   },
   "devDependencies": {
+    "patch-package": "^7.0.0",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4"
   }

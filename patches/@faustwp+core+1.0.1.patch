@@ -1,0 +1,30 @@
+diff --git a/node_modules/@faustwp/core/dist/cjs/auth/client/accessToken.js b/node_modules/@faustwp/core/dist/cjs/auth/client/accessToken.js
+index 3452556..47d6efe 100644
+--- a/node_modules/@faustwp/core/dist/cjs/auth/client/accessToken.js
++++ b/node_modules/@faustwp/core/dist/cjs/auth/client/accessToken.js
+@@ -112,8 +112,9 @@ async function fetchAccessToken(code) {
+     let url = `${basePath !== null && basePath !== void 0 ? basePath : ''}${constants_js_1.FAUST_API_BASE_PATH}/${constants_js_1.TOKEN_ENDPOINT_PARTIAL_PATH}`;
+     // Add the code to the url if it exists
+     if ((0, isString_js_1.default)(code) && code.length > 0) {
+-        url += `?code=${code}`;
++        url += `?code=${encodeURIComponent(code)}`;
+     }
++    console.debug(url);
+     try {
+         const response = await fetch(url, {
+             method: 'GET',
+diff --git a/node_modules/@faustwp/core/dist/mjs/auth/client/accessToken.js b/node_modules/@faustwp/core/dist/mjs/auth/client/accessToken.js
+index 57850bc..3d0b8e0 100644
+--- a/node_modules/@faustwp/core/dist/mjs/auth/client/accessToken.js
++++ b/node_modules/@faustwp/core/dist/mjs/auth/client/accessToken.js
+@@ -99,8 +99,9 @@ export async function fetchAccessToken(code) {
+     let url = `${basePath !== null && basePath !== void 0 ? basePath : ''}${FAUST_API_BASE_PATH}/${TOKEN_ENDPOINT_PARTIAL_PATH}`;
+     // Add the code to the url if it exists
+     if (isString(code) && code.length > 0) {
+-        url += `?code=${code}`;
++        url += `?code=${encodeURIComponent(code)}`;
+     }
++    console.debug(url);
+     try {
+         const response = await fetch(url, {
+             method: 'GET',
